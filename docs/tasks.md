@@ -1,6 +1,54 @@
 # HNotes - Task Tracker & Roadmap
 
-## Current Status: Phase 0 - Setup
+## Current Status: Phase 1 - Bug Fixes & Feature Completion
+
+---
+
+## CRITICAL BUGS TO FIX (January 8, 2026)
+
+### Bug #1: Health Permissions Not Working ⚠️
+- **Issue:** App does NOT request Android Health Connect permissions from user
+- **Expected:** After profile setup, app should trigger OS permission dialog
+- **Root Cause:** Missing `Health().configure()` call before requesting authorization
+- **Files Fixed:**
+  - `android/app/src/main/AndroidManifest.xml` - Added Health Connect intent-filter
+  - `lib/features/health/services/health_service.dart` - Added configure() call
+- **Status:** ✅ FIXED
+
+### Bug #2: Goal Selection Card Visual Issues ⚠️
+- **Issue:** Selected goal card looks "washed out" with poor contrast
+- **Root Cause:** Using `AppColors.skyBlue.withOpacity(0.1)` makes selection nearly invisible
+- **File Fixed:** `lib/features/onboarding/screens/goal_selection_screen.dart`
+- **Solution:** Changed to solid styling with better border and shadow contrast
+- **Status:** ✅ FIXED
+
+### Bug #3: Meal History & Logging Disconnected ⚠️
+- **Issue:** 
+  - Quick Actions at bottom of dashboard, hard to find
+  - No "Log Activity" button exists
+  - FAB overlaps content
+- **Files Fixed:**
+  - `lib/features/dashboard/screens/dashboard_screen.dart` - Added Log Activity button
+  - `lib/features/burn_tracking/screens/activity_input_screen.dart` - NEW FILE
+- **Status:** ✅ FIXED
+
+### Bug #4: Settings Screen Placeholders ⚠️
+- **Issue:** Most settings show "Coming soon!" with no functionality
+- **File Fixed:** `lib/features/settings/screens/settings_screen.dart`
+- **Status:** ✅ FIXED
+
+### Bug #5: Mock Notifications - No Real System ⚠️
+- **Issue:** Notifications screen shows hardcoded mock data
+- **Files Fixed:**
+  - `lib/data/models/app_notification.dart` - NEW FILE
+  - `lib/shared/providers/notification_provider.dart` - NEW FILE
+  - `lib/features/notifications/screens/notifications_screen.dart` - Updated
+- **Status:** ✅ FIXED
+
+### Bug #6: MealInputScreen Button Visibility ⚠️
+- **Issue:** Buttons disappear or have visibility issues
+- **File Fixed:** `lib/features/intake_tracking/screens/meal_input_screen.dart`
+- **Status:** ✅ FIXED
 
 ---
 
@@ -8,21 +56,18 @@
 **Deadline: January 15, 2026 (Wednesday 11:59pm)**
 
 ### To Do
-- [ ] Install Flutter SDK
-- [ ] Install Android Studio
-- [ ] Configure Android emulator OR connect physical device
-- [ ] Create Flutter project
-- [ ] Build "Hello World" app with name displayed
-- [ ] Run app on emulator/device (NOT web browser)
 - [ ] Record demo video with date visible and face shown
 - [ ] Document any errors and solutions
 - [ ] Create PDF submission
 - [ ] Submit assignment
 
-### In Progress
-- [ ] Planning and documentation
-
 ### Completed
+- [x] Install Flutter SDK
+- [x] Install Android Studio
+- [x] Configure Android emulator
+- [x] Create Flutter project
+- [x] Build app with name displayed
+- [x] Run app on emulator/device
 - [x] Created project folder structure
 - [x] Created documentation (idea.md, tasks.md, plan.md, setup.md)
 
@@ -30,17 +75,24 @@
 
 ## Phase 1: Core App Structure (Week 2-3)
 ### To Do
-- [ ] Set up project architecture (folders, state management)
-- [ ] Create main navigation structure
-- [ ] Design and implement home dashboard UI
-- [ ] Create onboarding flow screens
-- [ ] Implement local storage for user data
-
-### In Progress
-(none)
+- [ ] Fix UI overflow on Pixel 6 Pro (75px overflow) - needs physical device testing
 
 ### Completed
-(none)
+- [x] Set up project architecture (folders, state management)
+- [x] Create main navigation structure
+- [x] Design and implement home dashboard UI
+- [x] Create onboarding flow screens
+- [x] Fix color consistency (gradient across all onboarding screens)
+- [x] Implement state management with Provider
+- [x] Add input pickers (age, height, weight) with scroll wheel
+- [x] Implement data persistence with SharedPreferences
+- [x] Create splash screen with onboarding check
+- [x] Fix goal card text contrast on selection
+- [x] Implement Settings screen (view profile, update weight, logout)
+- [x] Implement Notifications screen with real notification provider
+- [x] Fix Health Connect permissions request flow
+- [x] Add Activity Input Screen
+- [x] Fix Quick Actions accessibility on Dashboard
 
 ---
 

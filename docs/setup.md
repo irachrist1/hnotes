@@ -90,75 +90,6 @@ Press 'y' to accept all licenses.
 
 ---
 
-## Error Log
-
-Document any errors you encounter below. This section will be included in your PDF submission.
-
-### Error 1: [Title]
-**Date**:
-**Description**:
-
-**Solution**:
-
----
-
-### Error 2: [Title]
-**Date**:
-**Description**:
-
-**Solution**:
-
----
-
-### Error 3: [Title]
-**Date**:
-**Description**:
-
-**Solution**:
-
----
-
-## Common Errors & Solutions
-
-### "flutter: command not found"
-**Cause**: Flutter not added to PATH
-**Solution**:
-1. Verify Flutter is extracted to `C:\flutter`
-2. Add `C:\flutter\bin` to PATH environment variable
-3. Restart Command Prompt/Terminal
-
-### "Android SDK not found"
-**Cause**: Android Studio SDK not configured
-**Solution**:
-1. Open Android Studio
-2. Go to SDK Manager
-3. Note the SDK location path
-4. Run: `flutter config --android-sdk "C:\Users\YourName\AppData\Local\Android\Sdk"`
-
-### "No connected devices"
-**Cause**: Emulator not running or device not connected
-**Solution**:
-1. Start Android emulator from Device Manager
-2. OR connect physical device with USB debugging enabled
-3. Run `flutter devices` to verify
-
-### "License not accepted"
-**Cause**: Android SDK licenses need acceptance
-**Solution**:
-```bash
-flutter doctor --android-licenses
-```
-Accept all licenses by pressing 'y'.
-
-### Emulator runs slowly
-**Cause**: Hardware acceleration not enabled
-**Solution**:
-1. Enable Hyper-V in Windows Features
-2. OR install Intel HAXM from SDK Manager
-3. Ensure virtualization is enabled in BIOS
-
----
-
 ## Running the Hello World App
 
 ### Create Project (if not already created)
@@ -175,45 +106,9 @@ cd hnotes
 flutter run
 ```
 
-### Run on Physical Device
-1. Enable Developer Options on your Android phone:
-   - Go to Settings → About Phone
-   - Tap "Build Number" 7 times
-2. Enable USB Debugging:
-   - Settings → Developer Options → USB Debugging
-3. Connect phone via USB
-4. Run:
-```bash
-flutter devices  # Verify device is listed
-flutter run      # Run on device
-```
-
 ---
 
-## Recording Demo Video
-
-### Requirements
-1. **Show current date**: Have a clock/calendar visible on screen or say the date
-2. **Show your face**: Brief appearance for identity verification
-3. **Show app running**: Clear view of "Hello World" and your name on emulator/device
-
-### Recording Tips
-- Use OBS Studio (free) or Windows Game Bar (Win+G)
-- For emulator: Record your entire screen
-- For physical device: Point camera at phone screen
-- Keep video under 2 minutes
-- Speak clearly if providing voice narration
-
-### Upload Options
-1. **YouTube** (Unlisted): Most reliable, paste link in PDF
-2. **Google Drive**: Share with "Anyone with link can view"
-3. **OneDrive**: Create shareable link
-
-**IMPORTANT**: Test your video link in an incognito browser window before submitting!
-
----
-
-## PDF Submission Template
+## PDF Submission 
 
 Create a PDF with the following structure:
 

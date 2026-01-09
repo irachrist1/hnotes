@@ -1,0 +1,34 @@
+### Navigation Pattern Research
+
+**Modern apps (Airbnb, Uber, Apple Health) avoid:**
+- Traditional top AppBars (dated, wastes screen space)
+- Poor contrast (blue AppBar on blue gradient)
+- Heavy headers
+
+**What they use:**
+
+1. **Bottom Navigation** (3-5 main sections)
+   - Persistent, accessible
+   - Icons + minimal labels
+   - Examples: Uber, Instagram
+
+2. **Gesture-Based** (swipe between screens)
+   - No visible nav elements
+   - Examples: Apple Health, Photos
+
+3. **Floating Action Button (FAB)**
+   - Primary action (+ to log meal)
+   - Bottom-right or center
+   - Examples: Gmail, MyFitnessPal
+
+4. **Full-Screen Immersive**
+   - No AppBar, status bar blends
+   - Back button floats when needed
+   - Examples: Airbnb, Instagram stories
+
+**For HNotes:**
+- Bottom Nav: Dashboard | Log | Stats | Profile
+- FAB for quick meal logging
+- No AppBar (full gradient)
+- Swipe gestures
+
